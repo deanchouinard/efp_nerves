@@ -54,8 +54,8 @@ config :logger, backends: [RingLogger]
 # See https://hexdocs.pm/nerves_firmware_ssh/readme.html for more information
 # on configuring nerves_firmware_ssh.
 
-# key = Path.join(System.user_home!(), ".ssh/id_rsa.pub")
-key = Path.join(System.user_home!(), ".ssh/authorized_keys")
+key = Path.join(System.user_home!(), ".ssh/id_rsa.pub")
+# key = Path.join(System.user_home!(), ".ssh/authorized_keys")
 unless File.exists?(key), do: Mix.raise("No SSH Keys found. Please generate an ssh key")
 
 config :nerves_firmware_ssh,
